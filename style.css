@@ -1,0 +1,197 @@
+/* The Prompt Desk - v2 stylesheet (dashboard-safe) */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text: #222;
+    --muted: #666;
+    --border: #eaeaea;
+    --bg: #fafafa;
+    --card: #ffffff;
+    --link: #0b5fff;
+}
+
+body {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    line-height: 1.75;
+    font-size: 18px;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 28px 18px 60px;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding-bottom: 22px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid var(--border);
+}
+
+header h1 {
+    font-size: 2.2rem;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+}
+
+header .tagline {
+    color: var(--muted);
+    font-size: 1.05rem;
+    margin-bottom: 14px;
+}
+
+nav {
+    font-size: 1.02rem;
+}
+
+nav a {
+    color: var(--link);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Post list on index page (KEEP THESE CLASS NAMES) */
+.post-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.post-list li {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px 18px 16px;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.post-list li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.06);
+}
+
+.post-list a {
+    display: inline-block;
+    font-size: 1.25rem;
+    line-height: 1.25;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+
+.post-list a:hover {
+    color: var(--link);
+}
+
+.post-list .date {
+    display: block;
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 0.95rem;
+    font-style: italic;
+}
+
+/* Individual post pages */
+main {
+    margin-top: 10px;
+}
+
+article {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 26px 22px;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03);
+}
+
+article h2 {
+    font-size: 1.9rem;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
+}
+
+article .date {
+    color: var(--muted);
+    font-style: italic;
+    margin-bottom: 18px;
+}
+
+article h3 {
+    margin-top: 22px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    letter-spacing: -0.01em;
+}
+
+article p {
+    margin-bottom: 1em;
+}
+
+/* Quotes */
+blockquote {
+    border-left: 4px solid var(--border);
+    margin: 1.5em 0;
+    padding: 0.2em 0 0.2em 1em;
+    font-style: italic;
+    color: #444;
+}
+
+/* Images in posts */
+article img {
+    max-width: 100%;
+    height: auto;
+    margin: 1.2em 0 0.6em;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+.image-caption {
+    font-size: 0.95em;
+    color: var(--muted);
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 1.4em;
+}
+
+/* Footer */
+footer {
+    margin-top: 28px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.95em;
+    text-align: center;
+}
+
+/* Small screens */
+@media (max-width: 520px) {
+    body {
+        font-size: 17px;
+        padding: 22px 14px 50px;
+    }
+
+    header h1 {
+        font-size: 1.9rem;
+    }
+
+    .post-list a {
+        font-size: 1.15rem;
+    }
+
+    article {
+        padding: 22px 16px;
+    }
+}
